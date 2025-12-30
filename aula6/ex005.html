@@ -5,23 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primeiros passos com DOM</title>
     <style>
-        body {
-            background-color: rgb(106, 107, 212);
+        body{
+            background-color: rgb(77, 77, 216);
             color: white;
-            font: normal 18pt arial;
-            display: flex;
-            flex-direction: column;
+        }
+        div {
+            border: 1px solid black;
+            display: inline;
+            padding: 4px;
+            border-radius: 5px;
+        }
+        p {
+            display: none;
         }
     </style>
 </head>
 <body>
-    <h1>Iniciando estudos com DOM</h1>
+    <h1>Iniciando com o DOM</h1>
     <p>Aqui vai o resultado</p>
-    <p id="msg">aprendendo a usar o <strong>DOM</strong> em javascript</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em java script</p>
     <div>Clique em mim</div>
     <script>
-        let msg = document.getElementById('msg')
-        msg.innerText = "Alterado"
+        var botao = document.getElementsByClassName('div')[0]
+        var p1 = document.getElementsByTagName('p')[0]
+        p1.innerText = 'Mensagem oculta'
+        botao = addEventListener('click', function() {
+            p1.style.display = 'flex'
+        })
+        
     </script>
 </body>
+
 </html>
